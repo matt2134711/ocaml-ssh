@@ -1,0 +1,5 @@
+# Ignore build artifacts
+_build
+
+# Ignore generated merlin files
+**/*.merlin

@@ -1,0 +1,22 @@
+opam-version: "2.0"
+name: "ssh"
+version: "0.1"
+synopsis: "Light wrapper around libssh"
+maintainer: "Matt S <matt2134711@gmail.com>"
+authors: "Matt S <matt2134711@gmail.com>"
+license: "ISC"
+depends: [
+  "dune" {build}
+  "ocaml"
+  "odoc" {with-doc}
+]
+depexts: [
+  ["libssh-dev" "pkg-config"] {build & os-distribution = "debian"}
+  ["libssh-dev" "pkg-config"] {build & os-distribution = "ubuntu"}
+  ["libssh"] {os-distribution = "debian"}
+  ["libssh"] {os-distribution = "ubuntu"}
+]
+homepage: "https://gitlab.com/matt2134711/ocaml-ssh"
+bug-reports: "https://gitlab.com/matt2134711/ocaml-ssh/issues"
+dev-repo: "git://gitlab.com/matt2134711/ocaml-ssh.git"
+build: ["dune" "build" "-p" name "-j" jobs]

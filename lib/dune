@@ -1,0 +1,11 @@
+(library
+  (name            ssh)
+  (public_name     ssh)
+  (c_names         ssh)
+  (c_flags         (:include c_flags.sexp))
+  (c_library_flags (:include c_library_flags.sexp)))
+
+(rule
+  (targets c_flags.sexp c_library_flags.sexp)
+  (deps    (:discover config/discover.exe))
+  (action  (run %{discover})))
