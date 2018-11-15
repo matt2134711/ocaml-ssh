@@ -1,0 +1,3 @@
+(executables
+  (names     connect exec)
+  (libraries ssh))
