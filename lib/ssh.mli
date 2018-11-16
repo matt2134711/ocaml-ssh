@@ -42,6 +42,7 @@ val exec : channel -> string -> string
     @param channel A channel to execute the command on. Must be readable and writable.
     @param command The command to execute
     @return The result of the command
+    @since 0.1
 *)
 
 val execs : session -> string -> string
@@ -49,6 +50,7 @@ val execs : session -> string -> string
     @param session A session to create a channel for
     @param command The command to execute
     @return The result of the command
+    @since 0.1
 *)
 
 val disconnect : session -> unit
